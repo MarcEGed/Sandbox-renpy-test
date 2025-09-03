@@ -6,7 +6,7 @@ screen hud():
             text "Time: [calendar.DaT]"
             text "Location: [gs.location]"
             text "Energy: [gs.stats.get('energy',0)]  Money: [gs.stats.get('money',0)]"
-            text "Affection (Alice): [gs.stats.get('affection_alice',0)]"
+            text "Affection (Eva): [gs.stats.get('affection_eva',0)]"
             textbutton "Debug" action ShowMenu("debug_overlay")
 
 init python:

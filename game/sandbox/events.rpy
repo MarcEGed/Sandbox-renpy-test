@@ -2,8 +2,8 @@ init python:
 
     # #==============EVENT CONDITION FUNCTIONS==============
 
-    # Event: First meeting with Alice
-    def condition_meet_alice(gs, calendar):
+    # Event: First meeting with Eva
+    def condition_meet_eva(gs, calendar):
         # Trigger on first day if player is at the park
         if calendar.total_days == 0 and gs.location == "park":
             return True
@@ -15,9 +15,9 @@ init python:
             return True
         return False
 
-    # Event: Alice date (requires meeting Alice and enough money)
-    def condition_alice_date(gs, calendar):
-        if gs.get_flag("met_alice") and gs.location == "downtown" and gs.stats.get("money", 0) >= 20:
+    # Event: Eva date (requires meeting Eva and enough money)
+    def condition_eva_date(gs, calendar):
+        if gs.get_flag("met_eva") and gs.location == "downtown" and gs.stats.get("money", 0) >= 20:
             return True
         return False
 
@@ -41,12 +41,12 @@ init python:
     #==============REGISTER EVENTS==============
 
     register_event(Event(
-        name="meet_alice_first",
-        label="alice_intro",
-        condition_func=condition_meet_alice,
+        name="meet_eva_first",
+        label="eva_intro",
+        condition_func=condition_meet_eva,
         once=True,
         priority=50,
-        description="First-time meeting with Alice on day 0 if at the park."
+        description="First-time meeting with Eva on day 0 if at the park."
     ))
 
     register_event(Event(
@@ -59,12 +59,12 @@ init python:
     ))
 
     register_event(Event(
-        name="alice_date_unlock",
-        label="alice_date",
-        condition_func=condition_alice_date,
+        name="eva_date_unlock",
+        label="eva_date",
+        condition_func=condition_eva_date,
         once=True,
         priority=30,
-        description="Date with Alice when met and in downtown with enough money."
+        description="Date with Eva when met and in downtown with enough money."
     ))
 
     register_event(Event(

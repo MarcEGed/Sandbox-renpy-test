@@ -72,8 +72,8 @@ $ gs.change_stat("money", 50)     # Add 50 money
 $ gs.change_stat("energy", -2)    # Subtract 2 energy
 
 # Set/get flags
-$ gs.set_flag("met_alice")        # Set flag to True
-$ gs.get_flag("met_alice")        # Returns True/False
+$ gs.set_flag("met_eva")        # Set flag to True
+$ gs.get_flag("met_eva")        # Returns True/False
 
 # Change time
 $ advance_hours(2)                # Advance 2 hours
@@ -109,8 +109,8 @@ label choice_event:
 ### Conditional Event
 ```python
 label conditional_event:
-    if gs.get_flag("met_alice"):
-        "Alice waves at you!"
+    if gs.get_flag("met_eva"):
+        "Eva waves at you!"
     else:
         "You see a stranger."
     return
