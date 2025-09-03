@@ -30,3 +30,6 @@ label location_menu:
             $ set_hour(7)
             $ set_minute(0)
             jump sandbox_loop
+
+        "🧪 Test Menu":
+            jump test_menu

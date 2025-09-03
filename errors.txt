@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/sandbox/events_loader.rpy", line 7: unexpected indent
+        EVENT_FOLDER = os.path.join(renpy.config.basedir, "game", "event_scripts")
+        ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Thu Sep  4 01:31:44 2025

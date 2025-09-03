@@ -1,3 +1,8 @@
+# TRIGGER calendar.total_days == 0 and gs.location == "park"
+# ONCE True
+# PRIORITY 50
+# DESCRIPTION First-time meeting with Eva on day 0 if at the park
+
 label eva_intro:
     scene black with fade
     "You go to the park and meet Eva for the first time."

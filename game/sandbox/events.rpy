@@ -38,49 +38,6 @@ init python:
             return True
         return False
 
-    #==============REGISTER EVENTS==============
-
-    register_event(Event(
-        name="meet_eva_first",
-        label="eva_intro",
-        condition_func=condition_meet_eva,
-        once=True,
-        priority=50,
-        description="First-time meeting with Eva on day 0 if at the park."
-    ))
-
-    register_event(Event(
-        name="morning_walk",
-        label="morning_walk",
-        condition_func=condition_morning_walk,
-        once=False,
-        priority=10,
-        description="Repeatable morning walk every day at 08:00 in the park."
-    ))
-
-    register_event(Event(
-        name="eva_date_unlock",
-        label="eva_date",
-        condition_func=condition_eva_date,
-        once=True,
-        priority=30,
-        description="Date with Eva when met and in downtown with enough money."
-    ))
-
-    register_event(Event(
-        name="evening_stroll",
-        label="evening_stroll",
-        condition_func=condition_evening_stroll,
-        once=False,
-        priority=5,
-        description="Optional evening stroll in the park at 18:00."
-    ))
-
-    register_event(Event(
-        name="payday",
-        label="payday_event",
-        condition_func=condition_payday,
-        once=False,
-        priority=20,
-        description="Payday occurs every 7 days if at home."
-    ))
+    #==============MANUAL EVENT REGISTRATION DISABLED==============
+    # Events are now loaded automatically by events_loader.rpy
+    # See event_scripts/ folder for event definitions with metadata
