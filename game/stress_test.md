@@ -1,8 +1,9 @@
 #  VN Sandbox Stress Test To-Do
 
 1. **Event Volume Test**  
-   - [ ] Auto-generate 1,000+ dummy events.  
-   - [ ] Confirm sandbox loads all without huge slowdown/crash.  
+   - [✓] Auto-generate 1,000+ dummy events.  
+   - [✓] Confirm sandbox loads all without huge slowdown/crash.  
+   NB: initial load time is slightly larger, but no in game frame drops/buffering/loading.
 
 2. **Trigger Collision Test**  
    - [ ] Create 100+ events with same trigger.  
