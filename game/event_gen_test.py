@@ -2,27 +2,28 @@ import os
 
 # === CONFIG ===
 EVENT_FOLDER = "event_scripts"
-NUM_EVENTS = 1000  # Number of days/events to generate
+NUM_EVENTS = 100  # Number of days/events to generate
 
 os.makedirs(EVENT_FOLDER, exist_ok=True)
+
+trigger = f"calendar.total_days == 1"
 
 for i in range(NUM_EVENTS):
     event_name = f"event_{i:04d}"
     filename = os.path.join(EVENT_FOLDER, f"{event_name}.rpy")
+    priority = i
 
-    trigger = f"calendar.total_days == {i}"
+    
 
     content = f"""# AUTO-GENERATED EVENT FILE
 # TRIGGER {trigger}
-# PRIORITY 1
+# PRIORITY {priority}
 # ONCE True
 
 label {event_name}:
-    "This is {event_name}, triggered on day {i}."
+    "This is {event_name}, all are triggered on day 1."
 
-    $ advance_days(1)
-    $ set_hour(7)
-    $ set_minute(0)
+    $ advance_minutes(10)
     return
 """
 

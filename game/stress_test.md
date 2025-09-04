@@ -6,8 +6,8 @@
    NB: initial load time is slightly larger, but no in game frame drops/buffering/loading.
 
 2. **Trigger Collision Test**  
-   - [ ] Create 100+ events with same trigger.  
-   - [ ] Check all fire in order (priority/random as designed).  
+   - [✓] Create 100+ events with same trigger.  
+   - [✓] Check all fire in order (priority/random as designed).  
 
 3. **GameState Dependency Test**  
    - [ ] Add events with deep/nested gamestate conditions.  
